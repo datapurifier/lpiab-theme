@@ -1,5 +1,5 @@
 <div class="added-meta" style="display: flex; align-items: center;">
-    {{ .name }}
+    <a href="../../author/{{ .name | urlize }}/" style="text-decoration: underline;">{{ .name }}</a>
     {{ if .orcid }}
         <a href="https://orcid.org/{{ .orcid }}">
             <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID iD icon" style="width:16px;height:16px;">
@@ -11,6 +11,6 @@
         </a>
     {{ end }}
     {{ if .affiliation }}
-         ({{ .affiliation }})
+         (<a href="../../affiliations/{{ .affiliation | urlize }}" style="text-decoration: underline;">{{ .affiliation }}</a>)
     {{ end}}
 </div>
