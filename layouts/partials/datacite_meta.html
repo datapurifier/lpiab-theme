@@ -4,8 +4,8 @@
             {{ partial "contributor_listing.html" . }}
         {{ end }}
     {{- end }}
-    <div class="post-meta">
-    Published: {{ .publicationYear }} on {{ .publisher }}
+    <div class="added-meta">
+    Published: {{ .publicationYear }} on {{ .publisher }}<br />
 {{ end }}
 {{with .context }}
     <a href="https://doi.org/{{ .Params.doi }}">
